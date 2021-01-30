@@ -1,0 +1,11 @@
+.jt-preview h6 {
+  margin-top: 12px;
+}
+
+.jt-preview-rendered {
+  font-size: 12px;
+  padding: 10px;
+  margin: 0 -10px 16px -10px;
+  background-color: rgba(255,255,255,0.22);
+  height: auto;
+}

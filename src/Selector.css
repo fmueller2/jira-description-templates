@@ -1,0 +1,37 @@
+.jt-select-wrapper {
+  width: 200px;
+  position: relative;
+}
+
+.jt-select-wrapper::before {
+  font-family: fontello;
+  content: "▼";
+  font-size: 16px;
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  color: #fff;
+}
+
+.jt-select-wrapper select {
+  -moz-appearance: none;
+  -moz-padding-start: calc(10px - 3px);
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  width: 100%;
+  height: 36px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6rwYAAi0BKCmSlGkAAAAASUVORK5CYII=) repeat;
+  padding-left: 10px;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+.jt-select-wrapper select option {
+  color: #fff;
+  background-color: #282c34;
+}

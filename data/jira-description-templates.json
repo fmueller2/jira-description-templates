@@ -1,0 +1,12 @@
+[
+  {
+    "id": "simple_en",
+    "name": "Simple [en]",
+    "content": "*WHO* Requestee\n\n*WHAT* About\n\n*WHY* Reason\n\n*ACCEPTANCE CRITERIA*\n\n * Some\n * criteria\n * …",
+    "hints": "Some additional info goes here. It's otional."
+  },{
+    "id": "simple_de",
+    "name": "Simple [de]",
+    "content": "*WER* Owner\n\n*WAS* Erläuterung\n\n*WARUM* Grund\n\n*AKZEPTANZKRITERIEN*\n\n * Liste an\n * Kriterien\n * …"
+  }
+]
