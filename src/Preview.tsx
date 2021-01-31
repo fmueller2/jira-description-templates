@@ -1,10 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './Preview.css';
 
-interface PreviewProps {
-  template: DescriptionTemplate
-}
-
 function Preview(props: PreviewProps) {
   const [loading, setLoading] = useState(true);
   const [renderedTemplate, setRenderedTemplate] = useState<string>('');
