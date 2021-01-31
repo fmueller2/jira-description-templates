@@ -23,3 +23,7 @@ type SelectorProps = {
   list: Array<Selectable>,
   onChange: Function
 }
+
+type SelectorOptionProps = {
+  onClick: Function
+}

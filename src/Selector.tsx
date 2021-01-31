@@ -1,22 +1,38 @@
-import React from 'react';
-import { SelectorWrapper, Select, Option } from './Selector.styles';
+import React, { useState } from 'react';
+import {
+  SelectorWrapper,
+  SelectorList,
+  SelectorListContainer,
+  SelectorOption,
+  SelectorSelected
+} from './Selector.styles';
 
 function Selector(props: SelectorProps) {
 
-  const select = (id: string): void => {
-    const selected = props.list.find(item => item.id === id);
-    if (!selected) return;
-    props.onChange(selected);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const handleToggleState = (): void => setIsOpen(!isOpen);
+
+  const handleSelectOption = (option: Selectable): void => {
+    option.id !== props.current.id && props.onChange(option);
+    setIsOpen(false);
   }
 
   return (
     <SelectorWrapper>
-      <Select value={props.current.id}
-              onChange={ e => select(e.target.value)}>
-        {props.list.map((item: Selectable) => (
-          <Option value={item.id}>{item.name}</Option>
-        ))}
-      </Select>
+      <SelectorSelected onClick={() => handleToggleState()}>
+        {props.current.name}
+      </SelectorSelected>
+      {isOpen && (
+        <SelectorListContainer>
+          <SelectorList>
+            {props.list.map((item: Selectable) => (
+              <SelectorOption className={props.current.id === item.id ? 'selected' : ''}
+                              onClick={() => handleSelectOption(item)}>{item.name}</SelectorOption>
+            ))}
+          </SelectorList>
+        </SelectorListContainer>
+      )}
     </SelectorWrapper>
   )
 }
