@@ -35,17 +35,17 @@ export const AppBody = Styled.div`
   color: white;
   padding: 10px 10px 0;
   background-color: #282c34;
+  height: 0;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.5s 0s ease-out;
   .active & {
-    display: block;
+    height: auto;
     box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
     opacity: 1;
     visibility: visible;
   }
 }
-
 `;
 
 export const AppFooter = Styled.div`
